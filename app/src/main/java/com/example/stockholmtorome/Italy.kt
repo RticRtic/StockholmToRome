@@ -37,7 +37,9 @@ class Italy : AppCompatActivity() {
         button.setOnClickListener {
             userAnswerItaly()
         }
-            // ööööÖÖÖÖöÖÖÖ
+            // manne was here
+
+
 
     }
 
