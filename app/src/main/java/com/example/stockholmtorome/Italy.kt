@@ -41,7 +41,7 @@ class Italy : AppCompatActivity() {
 
 
 
-        //Manne was here
+        //Manne was here yooo
     }
 
     fun userAnswerItaly() {
