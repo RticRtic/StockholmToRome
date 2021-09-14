@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StockholmToRome">
         <activity
+            android:name=".LastChanceSwitzerland"
+            android:exported="true" />
+        <activity
             android:name=".LastChanceGermany"
             android:exported="true" />
         <activity

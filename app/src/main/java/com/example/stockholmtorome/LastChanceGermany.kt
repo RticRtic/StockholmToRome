@@ -39,7 +39,7 @@ class LastChanceGermany : AppCompatActivity() {
     fun answerLastQuestionGr() {
         if(userPutInAnswerView.text.toString().toInt() == 4) {
             userSeeQuestionView.setText("Good job, lets travel!")
-            backToSwitzerland()
+            startGermanyPage()
         }
         else {
             userSeeQuestionView.setText("Germany dont like your ignorance, back to Stockholm!")
@@ -47,7 +47,7 @@ class LastChanceGermany : AppCompatActivity() {
         }
 
     }
-    fun backToSwitzerland() {
+    fun startGermanyPage() {
         val intent = Intent(this, Switzerland::class.java)
         startActivity(intent)
     }
