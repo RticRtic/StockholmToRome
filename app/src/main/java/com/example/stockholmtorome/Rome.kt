@@ -21,7 +21,7 @@ class Rome : AppCompatActivity() {
         userPutInAnswerView = findViewById(R.id.userAnswerRoEt)
 
         userSeeQuestionView.setText(
-            "What was Julius Ceasers dying word\n" +
+            "What was Julius Ceasers dying word?\n" +
                     "1.Veni, vidi, vici\n" +
                     "2.Non ducor, duco\n" +
                     "3.Et tu, Brute?\n" +
