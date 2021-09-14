@@ -30,7 +30,7 @@ class Italy : AppCompatActivity() {
                     "\n" +
                     "3. The architect made an error with the blueprint and didnt notice until halfway done.\n" +
                     "" +
-                    "4. It actually was straight when it was finished, a storm made it leaning 50 years after")
+                    "4. It actually was straight when it was finished, a storm made it leaning 50 years after.")
         Thread.sleep(2000)
 
         val button = findViewById<Button>(R.id.answerButtonIt)
