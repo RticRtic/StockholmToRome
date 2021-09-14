@@ -39,7 +39,13 @@ class Italy : AppCompatActivity() {
         }
             // ööööÖÖÖÖöÖÖÖ
 
+
+
+
+        //Manne was here yooo
+
         // david was here
+
 
     }
 
