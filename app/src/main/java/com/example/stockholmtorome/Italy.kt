@@ -39,9 +39,8 @@ class Italy : AppCompatActivity() {
         }
             // ööööÖÖÖÖöÖÖÖ
 
+        // david was here
 
-
-        //Manne was here yooo
     }
 
     fun userAnswerItaly() {
