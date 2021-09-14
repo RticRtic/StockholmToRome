@@ -43,7 +43,7 @@ class Italy : AppCompatActivity() {
 
     fun userAnswerItaly() {
         if (userPutInAnswerView.text.toString().toInt() == 3) {
-            userSeeQuestionView.setText("God job! Travel on to Rome")
+            userSeeQuestionView.setText("God job! Travel on to Rome.")
             startRomePage()
 
 
