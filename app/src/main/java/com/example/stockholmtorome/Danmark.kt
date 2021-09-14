@@ -81,17 +81,5 @@ class Danmark : AppCompatActivity() {
 
     }
 
-    fun randomQuestions() {
-
-
-
-    }
-
-
-
-
-
-
-
 
 }
