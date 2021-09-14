@@ -48,7 +48,7 @@ class Italy : AppCompatActivity() {
 
 
         } else {
-            userSeeQuestionView.setText("You failed!")
+            userSeeQuestionView.setText("You failed!!")
         }
 
 
