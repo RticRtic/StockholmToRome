@@ -30,7 +30,7 @@ class Danmark : AppCompatActivity() {
                 "2. Albert the gready\n" +
                 "3. Björn ironside\n" +
                 "4. Gorm the old")
-        Thread.sleep(2000)
+        Thread.sleep(2001)
 
         val button = findViewById<Button>(R.id.answerButton)
             button.setOnClickListener {
