@@ -28,7 +28,7 @@ class Italy : AppCompatActivity() {
                     " \n" +
                     "2. The builders did not communicate and made the base slightly higher on one side." +
                     "\n" +
-                    "3. The architect made an error with the blueprint and didnt notice until halfway done\n" +
+                    "3. The architect made an error with the blueprint and didnt notice until halfway done.\n" +
                     "" +
                     "4. It actually was straight when it was finished, a storm made it leaning 50 years after")
         Thread.sleep(2000)
