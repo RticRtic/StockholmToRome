@@ -26,7 +26,7 @@ class Italy : AppCompatActivity() {
 
                     "1. Because the mud on one of the sides of the base where softer." +
                     " \n" +
-                    "2. The builders did not communicate and made the base slightly higher on one side" +
+                    "2. The builders did not communicate and made the base slightly higher on one side." +
                     "\n" +
                     "3. The architect made an error with the blueprint and didnt notice until halfway done\n" +
                     "" +
