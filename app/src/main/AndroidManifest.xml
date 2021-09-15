@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StockholmToRome">
         <activity
+            android:name=".LastChanceItaly"
+            android:exported="true" />
+        <activity
+            android:name=".BorderControlItaly"
+            android:exported="true" />
+        <activity
+            android:name=".BorderControlSwitzerland"
+            android:exported="true" />
+        <activity
+            android:name=".LastChanceSwitzerland"
+            android:exported="true" />
+        <activity
             android:name=".LastChanceGermany"
             android:exported="true" />
         <activity
