@@ -26,9 +26,8 @@ class Rome : AppCompatActivity() {
                     "1.Veni, vidi, vici\n" +
                     "2.Non ducor, duco\n" +
                     "3.Et tu, Brute?\n" +
-                    "4.Aqua vitae"
-        )
-        Thread.sleep(2000)
+                    "4.Aqua vitae")
+        Thread.sleep(3000)
 
         val button = findViewById<Button>(R.id.answerButtonRo)
         button.setOnClickListener {
@@ -40,16 +39,21 @@ class Rome : AppCompatActivity() {
 
     fun userAnswerRome() {
         if (userPutInAnswerView.text.toString().toInt() == 3) {
-            userSeeQuestionView.setText("Congratulations, You traveled all the way to rome!")
-            backToStockholmPage()
+            userSeeQuestionView.setText("Congratulations, You traveled all the way to rome.\n" +
+                    "The Pope wants to see you!")
+            startFinalPage()
 
 
         } else {
-            userSeeQuestionView.setText("You failed!")
+            userSeeQuestionView.setText("You failed, Bye bye have fun in Stockholm!")
             backToStockholmPage()
         }
 
 
+    }
+    fun startFinalPage() {
+        val intent = Intent(this, FinalPage::class.java)
+        startActivity(intent)
     }
     fun backToStockholmPage() {
         val intent = Intent(this, MainActivity::class.java)

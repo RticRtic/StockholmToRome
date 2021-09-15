@@ -38,7 +38,7 @@ class BorderControlSwitzerland : AppCompatActivity() {
 
     fun answerStopSwitzerland() {
         if(userPutInAnswerView.text.toString().toInt() == 4) {
-            userSeeQuestionView.setText("Good job, Travel on to Italy!")
+            userSeeQuestionView.setText("Good job, lest Travel!")
             backToLastChanceSwitzerlandPage()
         }
         else {
