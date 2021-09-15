@@ -37,20 +37,13 @@ class Italy : AppCompatActivity() {
         button.setOnClickListener {
             userAnswerItaly()
         }
-            // ööööÖÖÖÖöÖÖÖ
 
-
-
-
-        //Manne was here yooo
-
-        // david was here
 
 
     }
 
     fun userAnswerItaly() {
-        if (userPutInAnswerView.text.toString().toInt() == 3) {
+        if (userPutInAnswerView.text.toString().toInt() == 1) {
             userSeeQuestionView.setText("God job! Travel on to Rome.")
             startRomePage()
 
