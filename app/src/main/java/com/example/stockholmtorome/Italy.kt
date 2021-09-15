@@ -34,10 +34,11 @@ class Italy : AppCompatActivity() {
         }
 
 
+
     }
 
     fun userAnswerItaly() {
-        if (userPutInAnswerView.text.toString().toInt() == 3) {
+        if (userPutInAnswerView.text.toString().toInt() == 1) {
             userSeeQuestionView.setText("God job! Travel on to Rome.")
             startRomePage()
 
@@ -46,6 +47,8 @@ class Italy : AppCompatActivity() {
             userSeeQuestionView.setText("You failed, answer the bordercontrol!")
             borderControlPage()
         }
+
+
 
 
     }
