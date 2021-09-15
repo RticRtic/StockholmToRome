@@ -24,15 +24,8 @@ class Italy : AppCompatActivity() {
         userSeeQuestionView.setText(
             "Why is the tower of pisa leaning?\n" +
 
-<<<<<<< HEAD
                     "1. Because the mud on one of the sides of the base where softer.\n" +
                     "2. The builders did not communicate and made the base slightly higher on one side.\n" +
-=======
-                    "1. Because the mud on one of the sides of the base where softer." + // fixa text
-                    " \n" +
-                    "2. The builders did not communicate and made the base slightly higher on one side." +
-                    "\n" +
->>>>>>> 963792ea68b061e7bede57aaa89753b581b2404c
                     "3. The architect made an error with the blueprint and didnt notice until halfway done.\n" +
                     "4. It actually was straight when it was finished, a storm made it leaning 50 years after.")
         Thread.sleep(2000)
