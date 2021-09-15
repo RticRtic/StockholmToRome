@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         fun startDanmarkPage() {
             val intent = Intent(this, Danmark::class.java)
+
             startActivity(intent)
 
         }

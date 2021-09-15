@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +13,7 @@ class Germany : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
     lateinit var userPutInAnswerView: EditText
+    var borderMusic : MediaPlayer? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +40,14 @@ class Germany : AppCompatActivity() {
 
     }
 
+    fun startBordermusic(){
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
+
+    }
+
 
     fun userAnswerGermany(): Boolean {
         if (userPutInAnswerView.text.toString().toInt() == 1) {
@@ -48,6 +58,7 @@ class Germany : AppCompatActivity() {
 
         } else {
             userSeeQuestionView.setText("You faild, answer the bordercontrol!")
+            startBordermusic()
             borderControlPage()
         }
         return false
