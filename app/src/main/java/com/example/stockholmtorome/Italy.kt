@@ -24,7 +24,7 @@ class Italy : AppCompatActivity() {
         userSeeQuestionView.setText(
             "Why is the tower of pisa leaning?\n" +
 
-                    "1. Because the mud on one of the sides of the base where softer." +
+                    "1. Because the mud on one of the sides of the base where softer." + // fixa text
                     " \n" +
                     "2. The builders did not communicate and made the base slightly higher on one side." +
                     "\n" +
@@ -38,6 +38,7 @@ class Italy : AppCompatActivity() {
             userAnswerItaly()
         }
 
+
     }
 
     fun userAnswerItaly() {
@@ -47,7 +48,8 @@ class Italy : AppCompatActivity() {
 
 
         } else {
-            userSeeQuestionView.setText("You failed!!")
+            userSeeQuestionView.setText("You failed, answer the bordercontrol!")
+            borderControlPage()
         }
 
 
@@ -56,6 +58,10 @@ class Italy : AppCompatActivity() {
     fun startRomePage() {
         val intent = Intent(this, Rome::class.java)
             startActivity(intent)
+    }
+    fun borderControlPage() {
+        val intent = Intent(this, BorderControlItaly::class.java)
+        startActivity(intent)
     }
 
 
