@@ -41,7 +41,7 @@ class FinalPage : AppCompatActivity() {
         startActivity(intent)
     }
     fun exitGame() {
-        finish()
+        System.exit(-1)
     }
 
 }

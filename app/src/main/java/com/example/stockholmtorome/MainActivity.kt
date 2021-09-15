@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             userSeeImageView = findViewById(R.id.stockholmIv)
             userSeeWelcomeTextView = findViewById(R.id.welcomeTv)
 
-            fun startmedia(){
+             fun startmedia(){
                 mediaPlayer = MediaPlayer.create(this, R.raw.backgroundmusic)
                 mediaPlayer?.setOnPreparedListener() {
                 mediaPlayer?.start()
