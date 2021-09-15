@@ -6,23 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".LastChanceSwitzerland">
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="207dp"
-        android:layout_height="218dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/stop_sign1" />
-
     <TextView
         android:id="@+id/lastchanceSwTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
@@ -48,4 +39,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userAnswerLastChanceSwEt" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="242dp"
+        android:layout_height="189dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/switzerland_flag" />
 </androidx.constraintlayout.widget.ConstraintLayout>

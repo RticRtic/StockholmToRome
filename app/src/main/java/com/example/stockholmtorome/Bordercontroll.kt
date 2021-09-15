@@ -56,7 +56,7 @@ class Bordercontroll : AppCompatActivity() {
     }
 
     fun backToDanmarkPage() {
-        val intent = Intent(this, Germany::class.java)
+        val intent = Intent(this, LastChanceDanmark::class.java)
         startActivity(intent)
 
     }
