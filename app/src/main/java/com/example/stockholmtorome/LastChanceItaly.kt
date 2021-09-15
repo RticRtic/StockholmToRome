@@ -25,6 +25,7 @@ class LastChanceItaly : AppCompatActivity() {
                 "2. Luigi Riva\n" +
                 "3. Roberto Mancini\n" +
                 "4. Gianluigi Buffon")
+        Thread.sleep(2000)
 
         val button = findViewById<Button>(R.id.answerButtonLastChanceIt)
         button.setOnClickListener {

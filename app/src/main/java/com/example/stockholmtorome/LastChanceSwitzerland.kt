@@ -25,6 +25,7 @@ class LastChanceSwitzerland : AppCompatActivity() {
                 "2. French, German, Italian\n" +
                 "3. French, German, Italian and Romansh\n" +
                 "4. German, Italian")
+        Thread.sleep(2000)
 
 
         val button = findViewById<Button>(R.id.answerButtonLastChanceSw)

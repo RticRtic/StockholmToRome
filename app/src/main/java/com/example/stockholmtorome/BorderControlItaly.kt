@@ -44,7 +44,7 @@ class BorderControlItaly : AppCompatActivity() {
 
         }
         else {
-            userSeeQuestionView.setText("You faild, Answer the bordercontrol!")
+            userSeeQuestionView.setText("You faild, back to Switzerland!")
             backToLastChancePageSwitzerland()
         }
 
