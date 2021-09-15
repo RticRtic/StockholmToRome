@@ -1,5 +1,6 @@
 package com.example.stockholmtorome
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -39,14 +40,20 @@ class Rome : AppCompatActivity() {
 
     fun userAnswerRome() {
         if (userPutInAnswerView.text.toString().toInt() == 3) {
-            userSeeQuestionView.setText("Good job")
+            userSeeQuestionView.setText("Congratulations, You traveled all the way to rome!")
+            backToStockholmPage()
 
 
         } else {
             userSeeQuestionView.setText("You failed!")
+            backToStockholmPage()
         }
 
 
+    }
+    fun backToStockholmPage() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
 
