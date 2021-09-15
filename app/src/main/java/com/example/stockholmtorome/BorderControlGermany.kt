@@ -38,21 +38,21 @@ class BorderControlGermany : AppCompatActivity() {
     fun answerStopGermany() {
         if(userPutInAnswerView.text.toString().toInt() == 4) {
             userSeeQuestionView.setText("Good job, lets travel more!")
-            backToGermanyPage()
+            backToLastChanceGermanyPage()
 
         }
         else {
             userSeeQuestionView.setText("You faild, back to Danmark!")
-            backToMainActivityPage()
+            backToLastChanceDanmarkPage()
 
         }
 
     }
-    fun backToGermanyPage() {
+    fun backToLastChanceGermanyPage() {
         val intent = Intent(this, LastChanceGermany::class.java)
         startActivity(intent)
     }
-    fun backToMainActivityPage() {
+    fun backToLastChanceDanmarkPage() {
         val intent = Intent(this, LastChanceDanmark::class.java)
         startActivity(intent)
 

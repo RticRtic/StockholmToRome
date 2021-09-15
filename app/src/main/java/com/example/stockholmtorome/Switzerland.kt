@@ -44,7 +44,8 @@ class Switzerland : AppCompatActivity() {
             startItalyPage()
 
         }else {
-            userSeeQuestionView.setText("You faild!")
+            userSeeQuestionView.setText("You faild, Answer the bordercontrol!")
+            borderControlPage()
         }
 
 
@@ -52,6 +53,10 @@ class Switzerland : AppCompatActivity() {
     fun startItalyPage() {
        val intent = Intent(this, Italy::class.java)
             startActivity(intent)
+    }
+    fun borderControlPage() {
+        val intent = Intent(this,BorderControlSwitzerland ::class.java)
+        startActivity(intent)
     }
 
 
