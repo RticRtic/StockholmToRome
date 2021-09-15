@@ -26,26 +26,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/danmarkFlagIv" />
 
-    <EditText
-        android:id="@+id/userAnswerEt"
+    <Button
+        android:id="@+id/answerButtonDk4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        android:text="4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonDk3" />
+
+    <Button
+        android:id="@+id/answerButtonDk1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionTv" />
 
     <Button
-        android:id="@+id/answerButton"
+        android:id="@+id/answerButtonDk2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="Travel"
+        android:layout_marginTop="8dp"
+        android:text="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerEt" />
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonDk1" />
+
+    <Button
+        android:id="@+id/answerButtonDk3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonDk2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

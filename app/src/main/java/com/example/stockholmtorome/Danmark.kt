@@ -4,7 +4,6 @@ import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -23,7 +22,7 @@ class Danmark : AppCompatActivity() {
         setContentView(R.layout.activity_danmark)
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerEt)
+
 
 
         userSeeQuestionView.setText("Who was the Danish king whom ruled over England during the viking era?\n" +
@@ -31,15 +30,29 @@ class Danmark : AppCompatActivity() {
                 "2. Albert the gready\n" +
                 "3. Björn ironside\n" +
                 "4. Gorm the old")
-        Thread.sleep(2001)
+        Thread.sleep(2000)
 
-        val button = findViewById<Button>(R.id.answerButton)
-            button.setOnClickListener {
-                userAnswerDanmark()
-
+        val button1 = findViewById<Button>(R.id.answerButtonDk1)
+                button1.setOnClickListener {
+                    userAnswerDanmark()
             }
+        val button2 = findViewById<Button>(R.id.answerButtonDk2)
+                button2.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonDk3)
+                button3.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
 
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonDk4)
+                button4.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
 
+        }
 
     }
 
@@ -64,18 +77,12 @@ class Danmark : AppCompatActivity() {
 
         }else {
             userSeeQuestionView.setText("You faild, answer the bordercontrol!")
-            startBordermusic()
-            borderControlPage()
+
         }
 
 
 
     }
-
-
-
-
-
 
     fun startGermanyPage() {
 
