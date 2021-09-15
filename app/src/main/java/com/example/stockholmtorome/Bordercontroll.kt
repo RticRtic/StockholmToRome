@@ -25,11 +25,11 @@ class Bordercontroll : AppCompatActivity() {
 
 
         userSeeQuestionView.setText(
-            "What is the name of Indias primeminister?\n" +
-                    "1. Ram Khatri\n" +
-                    "2. Narendra Modi\n" +
-                    "3. Mohammad Patel\n" +
-                    "4. Reddy Ahuja")
+            "The danish people like beer, what is the beer consumption pp/year?\n" +
+                    "1. 30L\n" +
+                    "2. 60L\n" +
+                    "3. 80L\n" +
+                    "4. 45L")
         Thread.sleep(2000)
 
         val button = findViewById<Button>(R.id.answerButtonStop)
