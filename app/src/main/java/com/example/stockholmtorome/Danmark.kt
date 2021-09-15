@@ -40,18 +40,19 @@ class Danmark : AppCompatActivity() {
                 button2.setOnClickListener {
                     borderControlPage()
                         startBordermusic()
+                            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
         }
         val button3 = findViewById<Button>(R.id.answerButtonDk3)
                 button3.setOnClickListener {
                     borderControlPage()
                         startBordermusic()
-
+                            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
         }
         val button4 = findViewById<Button>(R.id.answerButtonDk4)
                 button4.setOnClickListener {
                     borderControlPage()
                         startBordermusic()
-
+                            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
         }
 
     }
@@ -70,13 +71,6 @@ class Danmark : AppCompatActivity() {
         if(userPutInAnswerView.text.toString().toInt() == 1) {
             userSeeQuestionView.setText("Good job! Travel on to Germany")
             startGermanyPage()
-
-
-
-
-
-        }else {
-            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
 
         }
 
