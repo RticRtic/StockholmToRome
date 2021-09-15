@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,6 +12,7 @@ class Italy : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
     lateinit var userPutInAnswerView: EditText
+    var borderMusic : MediaPlayer? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,19 +36,33 @@ class Italy : AppCompatActivity() {
         }
 
 
+
+    }
+
+    fun startBordermusic(){
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
+
     }
 
     fun userAnswerItaly() {
         if (userPutInAnswerView.text.toString().toInt() == 1) {
+
             userSeeQuestionView.setText("God job! Travel on to Rome.\n" +
                     "You only have one chance to answer correct in Rome.")
-            startRomePage()
+
+             startRomePage()
 
 
         } else {
             userSeeQuestionView.setText("You failed, answer the bordercontrol!")
+            startBordermusic()
             borderControlPage()
         }
+
+
 
 
     }

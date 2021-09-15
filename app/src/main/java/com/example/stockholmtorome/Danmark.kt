@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
@@ -15,7 +16,7 @@ class Danmark : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
     lateinit var userPutInAnswerView: EditText
-
+    var borderMusic : MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +31,7 @@ class Danmark : AppCompatActivity() {
                 "2. Albert the gready\n" +
                 "3. Björn ironside\n" +
                 "4. Gorm the old")
-        Thread.sleep(2000)
+        Thread.sleep(2001)
 
         val button = findViewById<Button>(R.id.answerButton)
             button.setOnClickListener {
@@ -43,6 +44,13 @@ class Danmark : AppCompatActivity() {
     }
 
 
+    fun startBordermusic(){
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
+
+    }
 
     fun userAnswerDanmark(){
 
@@ -56,6 +64,7 @@ class Danmark : AppCompatActivity() {
 
         }else {
             userSeeQuestionView.setText("You faild, answer the bordercontrol!")
+            startBordermusic()
             borderControlPage()
         }
 
