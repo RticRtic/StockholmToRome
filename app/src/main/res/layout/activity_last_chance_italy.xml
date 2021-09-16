@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/lastchanceItTv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="TextView"
@@ -16,28 +16,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-
-    <EditText
-        android:id="@+id/userAnswerLastChanceItEt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastchanceItTv" />
-
-    <Button
-        android:id="@+id/answerButtonLastChanceIt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Travel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerLastChanceItEt" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -48,4 +26,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/italy_flag" />
+
+    <Button
+        android:id="@+id/answerButtonLci1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastchanceItTv" />
+
+    <Button
+        android:id="@+id/answerButtonLci2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonLci1"
+        tools:layout_editor_absoluteX="144dp" />
+
+    <Button
+        android:id="@+id/answerButtonLci3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonLci2"
+        tools:layout_editor_absoluteX="144dp" />
+
+    <Button
+        android:id="@+id/answerButtonLci4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonLci3"
+        tools:layout_editor_absoluteX="135dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
