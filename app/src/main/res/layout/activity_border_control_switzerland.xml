@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="231dp"
+        android:layout_width="match_parent"
         android:layout_height="198dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,33 +20,48 @@
         android:id="@+id/userSeeQuestionStopSwTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
-    <EditText
-        android:id="@+id/userAnswerStopSwEt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/answerButtonStopSw1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        android:text="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionStopSwTv" />
 
     <Button
-        android:id="@+id/answerButtonStopSw"
-        android:layout_width="98dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="64dp"
-        android:text="Travel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerStopSwEt" />
+        android:id="@+id/answerButtonStopSw2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonStopSw1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/answerButtonStopSw3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonStopSw2"
+        tools:layout_editor_absoluteX="156dp" />
+
+    <Button
+        android:id="@+id/answerButtonStopSw4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonStopSw3"
+        tools:layout_editor_absoluteX="156dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

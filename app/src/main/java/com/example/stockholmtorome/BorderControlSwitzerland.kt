@@ -10,8 +10,6 @@ import android.widget.TextView
 class BorderControlSwitzerland : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +18,7 @@ class BorderControlSwitzerland : AppCompatActivity() {
 
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionStopSwTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerStopSwEt)
+
 
         userSeeQuestionView.setText("What is Switzerland not famous of?\n" +
                 "1. Fondue\n" +
@@ -29,22 +27,31 @@ class BorderControlSwitzerland : AppCompatActivity() {
                 "4. Swizz cutlery")
         Thread.sleep(2000)
 
-        val button = findViewById<Button>(R.id.answerButtonStopSw)
-        button.setOnClickListener {
-            answerStopSwitzerland()
+        val button1 = findViewById<Button>(R.id.answerButtonStopSw1)
+                button1.setOnClickListener {
+                    backToLastChanceGermanyPage()
+                        userSeeQuestionView.setText("You faild, back To Germany!")
+
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonStopSw2)
+                button2.setOnClickListener {
+                    backToLastChanceGermanyPage()
+                        userSeeQuestionView.setText("You faild, back To Germany!")
+
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonStopSw3)
+                button3.setOnClickListener {
+                    backToLastChanceGermanyPage()
+                        userSeeQuestionView.setText("You faild, back To Germany!")
+
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonStopSw4)
+                button4.setOnClickListener {
+                    backToLastChanceSwitzerlandPage()
+                        userSeeQuestionView.setText("Good job, lest Travel!")
+
         }
 
-    }
-
-    fun answerStopSwitzerland() {
-        if(userPutInAnswerView.text.toString().toInt() == 4) {
-            userSeeQuestionView.setText("Good job, lest Travel!")
-            backToLastChanceSwitzerlandPage()
-        }
-        else {
-            userSeeQuestionView.setText("You faild, back To Germany!")
-            backToLastChanceGermanyPage()
-        }
     }
 
     fun backToLastChanceSwitzerlandPage() {
