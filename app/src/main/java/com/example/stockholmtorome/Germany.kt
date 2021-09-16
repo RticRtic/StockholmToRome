@@ -32,7 +32,6 @@ class Germany : AppCompatActivity() {
         val button1 = findViewById<Button>(R.id.answerButtonGr1)
                 button1.setOnClickListener {
                     startSwitzerlandPage()
-                        startBordermusic()
                             userSeeQuestionView.setText("Good job! Travel on to Switzerland")
         }
         val button2 = findViewById<Button>(R.id.answerButtonGr2)
