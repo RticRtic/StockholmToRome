@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,8 @@ import android.widget.TextView
 class LastChanceSwitzerland : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
+    var borderMusic: MediaPlayer? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +30,16 @@ class LastChanceSwitzerland : AppCompatActivity() {
 
         val button1 = findViewById<Button>(R.id.answerButtonLastChanceSw1)
                 button1.setOnClickListener {
+                    startBordermusic()
                     backToStockholmPage()
-                        userSeeQuestionView.setText("You faild! You couldn't handle the Swizz")
+                        userSeeQuestionView.setText("You failed! You couldn't handle the Swizz")
 
         }
         val button2 = findViewById<Button>(R.id.answerButtonLastChanceSw2)
                 button2.setOnClickListener {
+                    startBordermusic()
                     backToStockholmPage()
-                        userSeeQuestionView.setText("You faild! You couldn't handle the Swizz")
+                        userSeeQuestionView.setText("You failed! You couldn't handle the Swizz")
 
 
         }
@@ -46,8 +51,9 @@ class LastChanceSwitzerland : AppCompatActivity() {
         }
         val button4 = findViewById<Button>(R.id.answerButtonLastChanceSw4)
                 button4.setOnClickListener {
+                    startBordermusic()
                     backToStockholmPage()
-                        userSeeQuestionView.setText("You faild! You couldn't handle the Swizz")
+                        userSeeQuestionView.setText("You failed! You couldn't handle the Swizz")
 
         }
 
@@ -62,9 +68,17 @@ class LastChanceSwitzerland : AppCompatActivity() {
         startActivity(intent)
     }
 
-
+    fun startBordermusic() {
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
 
     }
+
+
+
+}
 
 
 

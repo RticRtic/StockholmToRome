@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,8 @@ import android.widget.TextView
 class BorderControlGermany : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
+    var borderMusic: MediaPlayer? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,20 +33,23 @@ class BorderControlGermany : AppCompatActivity() {
 
         val button1 = findViewById<Button>(R.id.answerButtonStopGr1)
                 button1.setOnClickListener {
+                    startBordermusic()
                     backToLastChanceDanmarkPage()
-                        userSeeQuestionView.setText("You faild, back to Danmark!")
+                        userSeeQuestionView.setText("You failed, back to Denmark!")
 
         }
         val button2 = findViewById<Button>(R.id.answerButtonStopGr2)
                 button2.setOnClickListener {
+                    startBordermusic()
                     backToLastChanceDanmarkPage()
-                        userSeeQuestionView.setText("You faild, back to Danmark!")
+                        userSeeQuestionView.setText("You failed, back to Denmark!")
 
         }
         val button3 = findViewById<Button>(R.id.answerButtonStopGr3)
                 button3.setOnClickListener {
+                    startBordermusic()
                     backToLastChanceDanmarkPage()
-
+                    userSeeQuestionView.setText("You failed, back to Denmark!")
         }
         val button4 = findViewById<Button>(R.id.answerButtonStopGr4)
                 button4.setOnClickListener {
@@ -52,6 +58,14 @@ class BorderControlGermany : AppCompatActivity() {
         }
 
     }
+    fun startBordermusic() {
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
+
+    }
+
 
     fun backToLastChanceGermanyPage() {
         val intent = Intent(this, LastChanceGermany::class.java)

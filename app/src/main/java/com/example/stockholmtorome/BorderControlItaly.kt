@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,8 +12,7 @@ class BorderControlItaly : AppCompatActivity() {
 
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswer: EditText
-
+    var borderMusic : MediaPlayer? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,45 +21,67 @@ class BorderControlItaly : AppCompatActivity() {
 
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionStopItTv)
-        userPutInAnswer = findViewById(R.id.userAnswerStopItEt)
 
-        userSeeQuestionView.setText("What was the currency in Italy before they adopted the Euro?\n" +
-                "1. Franc\n" +
-                "2. Lira\n" +
-                "3. Peso\n" +
-                "4. Dinar")
+
+        userSeeQuestionView.setText(
+            "What was the currency in Italy before they adopted the Euro?\n" +
+                    "1. Franc\n" +
+                    "2. Lira\n" +
+                    "3. Peso\n" +
+                    "4. Dinar"
+        )
         Thread.sleep(2000)
 
-        val button = findViewById<Button>(R.id.answerButtonStopIt)
-        button.setOnClickListener {
-            answerStopItaly()
-
-        }
-
-    }
-    fun answerStopItaly() {
-        if(userPutInAnswer.text.toString().toInt() == 2) {
-            userSeeQuestionView.setText("Good job, lets travel!")
-            backToLastChanceItalyPage()
-
-        }
-        else {
-            userSeeQuestionView.setText("You faild, back to Switzerland!")
+        val button1 = findViewById<Button>(R.id.answerButtonStopIt1)
+        button1.setOnClickListener {
             backToLastChancePageSwitzerland()
+            startBordermusic()
+            userSeeQuestionView.setText("You failed, back To Switzerland!")
+
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonStopIt2)
+        button2.setOnClickListener {
+            backToLastChancePageSwitzerland()
+            startBordermusic()
+            userSeeQuestionView.setText("You failed, back To Switzerland!")
+
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonStopIt3)
+        button3.setOnClickListener {
+            startBordermusic()
+            backToLastChancePageSwitzerland()
+            userSeeQuestionView.setText("You failed, back To Switzerland!")
+
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonStopIt4)
+        button4.setOnClickListener {
+            backToLastChanceItalyPage()
+            userSeeQuestionView.setText("Good job, lets move on to Italy!")
+
+
         }
 
-
-
     }
-    fun backToLastChanceItalyPage() {
-        val intent = Intent(this, LastChanceItaly::class.java)
-        startActivity(intent)
-    }
-    fun backToLastChancePageSwitzerland() {
-        val intent = Intent(this, LastChanceSwitzerland::class.java)
-        startActivity(intent)
+
+    fun startBordermusic() {
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
+
     }
 
 
+            fun backToLastChanceItalyPage() {
+            val intent = Intent(this, LastChanceItaly::class.java)
+            startActivity(intent)
+        }
 
-}
+        fun backToLastChancePageSwitzerland() {
+            val intent = Intent(this, LastChanceSwitzerland::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+
