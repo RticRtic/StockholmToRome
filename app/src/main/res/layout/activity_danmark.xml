@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/danmarkFlagIv"
-        android:layout_width="187dp"
-        android:layout_height="242dp"
-        android:layout_marginTop="2dp"
+        android:layout_width="190dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,95 +20,47 @@
         android:id="@+id/userSeeQuestionTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/answerButtonDk2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/danmarkFlagIv"
-        app:layout_constraintVertical_bias="0.363" />
+        app:layout_constraintTop_toBottomOf="@+id/danmarkFlagIv" />
 
     <Button
         android:id="@+id/answerButtonDk4"
-        android:layout_width="135dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="60dp"
-        android:text="Gorm the old"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerButtonDk2"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonDk3"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/answerButtonDk1"
-        android:layout_width="135dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="28dp"
-        android:text="Knut the great one"
-        app:layout_constraintBottom_toTopOf="@+id/answerButtonDk3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="Knut the great one" />
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionTv"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/answerButtonDk2"
-        android:layout_width="135dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="28dp"
-        android:text="Albert the gready"
-        app:layout_constraintStart_toEndOf="@+id/answerButtonDk1"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonDk1"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/answerButtonDk3"
-        android:layout_width="135dp"
-        android:layout_height="91dp"
-        android:layout_marginEnd="28dp"
-        android:text="Björn ironside"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/answerButtonDk4"
-        app:layout_constraintHorizontal_bias="0.981"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="425dp"
-        android:layout_marginEnd="411dp"
-        android:layout_marginBottom="306dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="397dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        app:constraint_referenced_ids="guideline2"
-        tools:layout_editor_absoluteY="425dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="635dp"
-        android:layout_marginEnd="411dp"
-        android:layout_marginBottom="96dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="598dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonDk2"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

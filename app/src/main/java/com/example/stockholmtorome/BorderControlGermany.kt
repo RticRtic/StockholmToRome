@@ -10,8 +10,6 @@ import android.widget.TextView
 class BorderControlGermany : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,45 +17,62 @@ class BorderControlGermany : AppCompatActivity() {
         setContentView(R.layout.activity_border_control_germany)
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionStopGrTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerStopGrEt)
 
-        userSeeQuestionView.setText("Germany are famous for their carindustry, what brand is not from Germany?\n" +
-                "1. Audi\n" +
-                "2. Volkswagen\n" +
-                "3. Porsche\n" +
-                "4. Fiat")
+
+        userSeeQuestionView.setText(
+            "Germany are famous for their carindustry, what brand is not from Germany?\n" +
+                    "1. Audi\n" +
+                    "2. Volkswagen\n" +
+                    "3. Porsche\n" +
+                    "4. Fiat"
+        )
         Thread.sleep(2000)
-        val button = findViewById<Button>(R.id.answerButtonStopGr)
-        button.setOnClickListener {
-            answerStopGermany()
 
+        val button1 = findViewById<Button>(R.id.answerButtonStopGr1)
+                button1.setOnClickListener {
+                    backToLastChanceDanmarkPage()
+                        userSeeQuestionView.setText("You faild, back to Danmark!")
+
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonStopGr2)
+                button2.setOnClickListener {
+                    backToLastChanceDanmarkPage()
+                        userSeeQuestionView.setText("You faild, back to Danmark!")
+
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonStopGr3)
+                button3.setOnClickListener {
+                    backToLastChanceDanmarkPage()
+
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonStopGr4)
+                button4.setOnClickListener {
+                    backToLastChanceGermanyPage()
+                        userSeeQuestionView.setText("Good job, lets travel more!")
         }
 
     }
 
-    fun answerStopGermany() {
-        if(userPutInAnswerView.text.toString().toInt() == 4) {
-            userSeeQuestionView.setText("Good job, lets travel more!")
-            backToLastChanceGermanyPage()
-
-        }
-        else {
-            userSeeQuestionView.setText("You faild, back to Danmark!")
-            backToLastChanceDanmarkPage()
-
-        }
-
-    }
     fun backToLastChanceGermanyPage() {
         val intent = Intent(this, LastChanceGermany::class.java)
         startActivity(intent)
     }
+
     fun backToLastChanceDanmarkPage() {
         val intent = Intent(this, LastChanceDanmark::class.java)
         startActivity(intent)
 
+
     }
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+

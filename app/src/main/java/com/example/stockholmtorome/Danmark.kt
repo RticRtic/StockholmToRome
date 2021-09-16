@@ -14,7 +14,6 @@ import kotlin.concurrent.thread
 class Danmark : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
     var borderMusic : MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +29,8 @@ class Danmark : AppCompatActivity() {
 
         val button1 = findViewById<Button>(R.id.answerButtonDk1)
                 button1.setOnClickListener {
-                    userAnswerDanmark()
+                    startGermanyPage()
+                        userSeeQuestionView.setText("Good job, lets travel!")
             }
         val button2 = findViewById<Button>(R.id.answerButtonDk2)
                 button2.setOnClickListener {
@@ -62,21 +62,9 @@ class Danmark : AppCompatActivity() {
 
     }
 
-    fun userAnswerDanmark(){
 
-        if(userPutInAnswerView.text.toString().toInt() == 1) {
-            userSeeQuestionView.setText("Good job! Travel on to Germany")
-            startGermanyPage()
-
-        }
-
-
-
-    }
 
     fun startGermanyPage() {
-
-
         val intent = Intent(this, Germany::class.java)
             startActivity(intent)
 
