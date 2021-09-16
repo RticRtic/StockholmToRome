@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="241dp"
+        android:layout_width="match_parent"
         android:layout_height="267dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,35 +17,57 @@
 
     <TextView
         android:id="@+id/userSeeQuestionItRo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <EditText
-        android:id="@+id/userAnswerRoEt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/answerButtonRo1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="92dp"
+        android:text="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionItRo" />
 
     <Button
-        android:id="@+id/answerButtonRo"
-        android:layout_width="wrap_content"
+        android:id="@+id/answerButtonRo2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="Answer"
+        android:layout_marginTop="8dp"
+        android:text="2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerRoEt" />
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonRo1" />
+
+    <Button
+        android:id="@+id/answerButtonRo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonRo2" />
+
+    <Button
+        android:id="@+id/answerButtonRo4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonRo3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

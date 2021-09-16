@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/userSeeQuestionItTv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="TextView"
@@ -26,27 +26,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <EditText
-        android:id="@+id/userAnswerItEt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/answerButtonIt1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="100dp"
+        android:text="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionItTv" />
 
     <Button
-        android:id="@+id/answerButtonIt"
-        android:layout_width="wrap_content"
+        android:id="@+id/answerButtonIt2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Travel"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonIt1"
+        tools:layout_editor_absoluteX="163dp" />
+
+    <Button
+        android:id="@+id/answerButtonIt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerItEt" />
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonIt2" />
+
+    <Button
+        android:id="@+id/answerButtonIt4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonIt3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

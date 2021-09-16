@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,7 +11,7 @@ import android.widget.TextView
 class Rome : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
+    var borderMusic: MediaPlayer? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,46 +20,59 @@ class Rome : AppCompatActivity() {
 
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionItRo)
-        userPutInAnswerView = findViewById(R.id.userAnswerRoEt)
+
 
         userSeeQuestionView.setText(
             "What was Julius Ceasers dying word?\n" +
                     "1.Veni, vidi, vici\n" +
                     "2.Non ducor, duco\n" +
                     "3.Et tu, Brute?\n" +
-                    "4.Aqua vitae")
+                    "4.Aqua vitae"
+        )
         Thread.sleep(3000)
 
-        val button = findViewById<Button>(R.id.answerButtonRo)
-        button.setOnClickListener {
-            userAnswerRome()
-        }
 
-
-    }
-
-    fun userAnswerRome() {
-        if (userPutInAnswerView.text.toString().toInt() == 3) {
-            userSeeQuestionView.setText("Congratulations, You traveled all the way to rome.\n" +
-                    "The Pope wants to see you!")
+        val button1 = findViewById<Button>(R.id.answerButtonRo1)
+        button1.setOnClickListener {
             startFinalPage()
-
-
-        } else {
-            userSeeQuestionView.setText("You failed, Bye bye have fun in Stockholm!")
+            userSeeQuestionView.setText("Good job! Travel on to Switzerland")
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonRo2)
+        button2.setOnClickListener {
             backToStockholmPage()
+            userSeeQuestionView.setText("You failed! Go back to Stockholm and eat som kalles caviar!")
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonRo3)
+        button3.setOnClickListener {
+            startBordermusic()
+            backToStockholmPage()
+            userSeeQuestionView.setText("You failed! Go back to Stockholm and eat som kalles caviar!")
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonRo4)
+        button4.setOnClickListener {
+            backToStockholmPage()
+
+            userSeeQuestionView.setText("You failed! Go back to Stockholm and eat som kalles caviar!")
         }
 
-
     }
+
     fun startFinalPage() {
         val intent = Intent(this, FinalPage::class.java)
         startActivity(intent)
     }
+
     fun backToStockholmPage() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
+    fun startBordermusic() {
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
 
+
+    }
 }
