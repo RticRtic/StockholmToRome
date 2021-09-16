@@ -5,18 +5,25 @@
       <map>
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_border_control_germany.xml" value="0.553125" />
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_border_control_italy.xml" value="0.4" />
-        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_border_control_switzerland.xml" value="0.38697916666666665" />
-        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_bordercontroll.xml" value="0.553125" />
-        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_danmark.xml" value="0.553125" />
+
+
+        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_border_control_switzerland.xml" value="0.264" />
+        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_bordercontroll.xml" value="0.264" />
+        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_danmark.xml" value="0.264" />
+
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_final_page.xml" value="0.4" />
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_germany.xml" value="0.553125" />
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_italy.xml" value="0.553125" />
-        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_last_chance_danmark.xml" value="0.553125" />
-        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_last_chance_germany.xml" value="0.553125" />
+
+
+        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_last_chance_danmark.xml" value="0.264" />
+        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_last_chance_germany.xml" value="0.264" />
+
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_last_chance_italy.xml" value="0.4" />
-        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_last_chance_switzerland.xml" value="0.5390625" />
+        <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_last_chance_switzerland.xml" value="0.264" />
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_main.xml" value="0.5390625" />
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_rome.xml" value="0.553125" />
+
         <entry key="..\:/Users/jespe/AndroidStudioProjects/StockholmToRome/app/src/main/res/layout/activity_switzerland.xml" value="0.553125" />
         <entry key="app/src/main/res/layout/activity_border_control_italy.xml" value="0.12182971014492754" />
         <entry key="app/src/main/res/layout/activity_bordercontroll.xml" value="0.22" />
@@ -27,6 +34,7 @@
         <entry key="app/src/main/res/layout/activity_last_chance_italy.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_rome.xml" value="0.23867753623188406" />
+
       </map>
     </option>
   </component>

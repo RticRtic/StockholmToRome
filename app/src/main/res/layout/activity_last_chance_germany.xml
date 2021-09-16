@@ -26,25 +26,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
-    <EditText
-        android:id="@+id/userAnswerLastChanceGrEt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/answerButtonLastChanceGr1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="24dp"
+        android:text="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastchanceGrTv" />
 
     <Button
-        android:id="@+id/answerButtonLastChanceGr"
-        android:layout_width="wrap_content"
+        android:id="@+id/answerButtonLastChanceGr2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Travel"
+        android:layout_marginTop="8dp"
+        android:text="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerLastChanceGrEt" />
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonLastChanceGr1" />
+
+    <Button
+        android:id="@+id/answerButtonLastChanceGr3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonLastChanceGr2" />
+
+    <Button
+        android:id="@+id/answerButtonLastChanceGr4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonLastChanceGr3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

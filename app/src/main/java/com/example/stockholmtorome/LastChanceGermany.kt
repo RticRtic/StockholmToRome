@@ -10,8 +10,6 @@ import android.widget.TextView
 class LastChanceGermany : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +18,6 @@ class LastChanceGermany : AppCompatActivity() {
 
 
         userSeeQuestionView = findViewById(R.id.lastchanceGrTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerLastChanceGrEt)
 
         userSeeQuestionView.setText("What of the following political parties do not exist in Germany?\n" +
                 "1. CDU\n" +
@@ -30,20 +27,28 @@ class LastChanceGermany : AppCompatActivity() {
         Thread.sleep(2000)
 
 
-        val button = findViewById<Button>(R.id.answerButtonLastChanceGr)
-        button.setOnClickListener {
-            answerLastQuestionGr()
-        }
+        val button1 = findViewById<Button>(R.id.answerButtonLastChanceGr1)
+                button1.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("Germany dont like your ignorance, back to Stockholm!")
 
-    }
-    fun answerLastQuestionGr() {
-        if(userPutInAnswerView.text.toString().toInt() == 4) {
-            userSeeQuestionView.setText("Good job, lets travel!")
-            startSwitzerlandPage()
         }
-        else {
-            userSeeQuestionView.setText("Germany dont like your ignorance, back to Stockholm!")
-            backToStockholm()
+        val button2 = findViewById<Button>(R.id.answerButtonLastChanceGr2)
+                button2.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("Germany dont like your ignorance, back to Stockholm!")
+
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonLastChanceGr3)
+                button3.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("Germany dont like your ignorance, back to Stockholm!")
+
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonLastChanceGr4)
+                button4.setOnClickListener {
+                    startSwitzerlandPage()
+                        userSeeQuestionView.setText("Good job, lets travel!")
         }
 
     }
@@ -57,4 +62,8 @@ class LastChanceGermany : AppCompatActivity() {
     }
 
 
-}
+
+    }
+
+
+
