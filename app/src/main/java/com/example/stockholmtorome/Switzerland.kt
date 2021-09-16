@@ -11,7 +11,6 @@ import android.widget.TextView
 class Switzerland : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
     var borderMusic : MediaPlayer? = null
 
 
@@ -22,7 +21,6 @@ class Switzerland : AppCompatActivity() {
         setContentView(R.layout.activity_switzerland)
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionSwTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerSwEt)
 
         userSeeQuestionView.setText("What brand does not originate from Switzerland?\n" +
                 "1. Knorr\n" +
@@ -31,10 +29,31 @@ class Switzerland : AppCompatActivity() {
                 "4. Lindt")
         Thread.sleep(2000)
 
-        val button = findViewById<Button>(R.id.answerButtonSw)
-        button.setOnClickListener {
-            answerSwitzerland()
+        val button1 = findViewById<Button>(R.id.answerButtonSw1)
+                button1.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
+                            userSeeQuestionView.setText("You faild, Answer the bordercontrol!")
 
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonSw2)
+                button2.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
+                            userSeeQuestionView.setText("You faild, Answer the bordercontrol!")
+
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonSw3)
+                button3.setOnClickListener {
+                    startItalyPage()
+                        userSeeQuestionView.setText("God job! Travel on to Italy")
+
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonSw4)
+                button4.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
+                            userSeeQuestionView.setText("You faild, Answer the bordercontrol!")
         }
 
 
@@ -49,23 +68,12 @@ class Switzerland : AppCompatActivity() {
 
     }
 
-    fun answerSwitzerland() {
-        if(userPutInAnswerView.text.toString().toInt() == 3) {
-            userSeeQuestionView.setText("God job! Travel on to Italy")
-            startItalyPage()
 
-        }else {
-            userSeeQuestionView.setText("You faild, Answer the bordercontrol!")
-            startBordermusic()
-            borderControlPage()
-        }
-
-
-    }
     fun startItalyPage() {
        val intent = Intent(this, Italy::class.java)
             startActivity(intent)
     }
+
     fun borderControlPage() {
         val intent = Intent(this,BorderControlSwitzerland ::class.java)
         startActivity(intent)

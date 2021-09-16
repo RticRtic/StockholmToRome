@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="196dp"
+        android:layout_width="match_parent"
         android:layout_height="332dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,26 +26,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/userAnswerSwEt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/answerButtonSw1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        android:text="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionSwTv" />
 
     <Button
-        android:id="@+id/answerButtonSw"
-        android:layout_width="wrap_content"
+        android:id="@+id/answerButtonSw2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Travel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerSwEt" />
+        android:layout_marginTop="8dp"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonSw1"
+        tools:layout_editor_absoluteX="160dp" />
+
+    <Button
+        android:id="@+id/answerButtonSw3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonSw2"
+        tools:layout_editor_absoluteX="157dp" />
+
+    <Button
+        android:id="@+id/answerButtonSw4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonSw3"
+        tools:layout_editor_absoluteX="157dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

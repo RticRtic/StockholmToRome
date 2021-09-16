@@ -10,15 +10,12 @@ import android.widget.TextView
 class LastChanceSwitzerland : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_last_chance_switzerland)
 
         userSeeQuestionView = findViewById(R.id.lastchanceSwTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerLastChanceSwEt)
 
         userSeeQuestionView.setText("What languages do they speak in Switzerland?\n" +
                 "1. French, German\n" +
@@ -28,24 +25,32 @@ class LastChanceSwitzerland : AppCompatActivity() {
         Thread.sleep(2000)
 
 
-        val button = findViewById<Button>(R.id.answerButtonLastChanceSw)
-        button.setOnClickListener {
-            answerLastChanceQuestion()
+        val button1 = findViewById<Button>(R.id.answerButtonLastChanceSw1)
+                button1.setOnClickListener {
+                    backToStockholmPage()
+                        userSeeQuestionView.setText("You faild! You couldn't handle the Swizz")
+
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonLastChanceSw2)
+                button2.setOnClickListener {
+                    backToStockholmPage()
+                        userSeeQuestionView.setText("You faild! You couldn't handle the Swizz")
+
+
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonLastChanceSw3)
+                button3.setOnClickListener {
+                    startItalyPage()
+                        userSeeQuestionView.setText("Good job, Travel to Italy!")
+
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonLastChanceSw4)
+                button4.setOnClickListener {
+                    backToStockholmPage()
+                        userSeeQuestionView.setText("You faild! You couldn't handle the Swizz")
 
         }
 
-
-    }
-    fun answerLastChanceQuestion() {
-        if(userPutInAnswerView.text.toString().toInt() == 3) {
-            userSeeQuestionView.setText("Good job, Travel to Italy!")
-            startItalyPage()
-
-        }
-        else {
-            userSeeQuestionView.setText("You faild! You couldn't handle the Swizz")
-            backToStockholmPage()
-        }
 
     }
     fun startItalyPage() {
@@ -58,4 +63,9 @@ class LastChanceSwitzerland : AppCompatActivity() {
     }
 
 
-}
+
+    }
+
+
+
+
