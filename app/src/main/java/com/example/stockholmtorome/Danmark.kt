@@ -24,11 +24,7 @@ class Danmark : AppCompatActivity() {
 
 
 
-        userSeeQuestionView.setText("Who was the Danish king whom ruled over England during the viking era?\n" +
-                "1. Knut the great one\n" +
-                "2. Albert the gready\n" +
-                "3. Björn ironside\n" +
-                "4. Gorm the old")
+        userSeeQuestionView.setText("Who was the Danish king whom ruled over England during the viking era?")
         Thread.sleep(2000)
 
         val button1 = findViewById<Button>(R.id.answerButtonDk1)
