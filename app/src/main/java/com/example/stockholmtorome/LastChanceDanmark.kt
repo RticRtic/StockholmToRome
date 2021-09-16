@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,6 +12,8 @@ class LastChanceDanmark : AppCompatActivity() {
 
 
     lateinit var userSeeQuestionView: TextView
+    var borderMusic: MediaPlayer? = null
+
 
 
 
@@ -32,6 +35,7 @@ class LastChanceDanmark : AppCompatActivity() {
 
         val button1 = findViewById<Button>(R.id.answerButtonLastChanceDk1)
                 button1.setOnClickListener {
+                    startBordermusic()
                     backToStockholm()
                         userSeeQuestionView.setText("Back to Stockholm with you, your sour herring!")
             }
@@ -42,11 +46,13 @@ class LastChanceDanmark : AppCompatActivity() {
         }
         val button3 = findViewById<Button>(R.id.answerButtonLastChanceDk3)
                 button3.setOnClickListener {
+                    startBordermusic()
                     backToStockholm()
                         userSeeQuestionView.setText("Back to Stockholm with you, your sour herring!")
         }
         val button4 = findViewById<Button>(R.id.answerButtonLastChanceDk4)
                 button4.setOnClickListener {
+                    startBordermusic()
                     backToStockholm()
                         userSeeQuestionView.setText("Back to Stockholm with you, your sour herring!")
         }
@@ -65,5 +71,12 @@ class LastChanceDanmark : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun startBordermusic() {
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
+
+    }
 
 }
