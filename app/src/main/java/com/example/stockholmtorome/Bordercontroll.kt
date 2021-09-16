@@ -1,6 +1,7 @@
 package com.example.stockholmtorome
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,6 +12,9 @@ import java.util.*
 class Bordercontroll : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
+    var borderMusic: MediaPlayer? = null
+
+
 
 
 
@@ -33,8 +37,9 @@ class Bordercontroll : AppCompatActivity() {
 
         val button1 = findViewById<Button>(R.id.answerButtonDkBc1)
                 button1.setOnClickListener {
+                    startBordermusic()
                     backToStockholm()
-                        userSeeQuestionView.setText("You faild, back to Stockholm!")
+                        userSeeQuestionView.setText("You failed, back to Stockholm!")
         }
         val button2 = findViewById<Button>(R.id.answerButtonDkBc2)
                 button2.setOnClickListener {
@@ -43,13 +48,15 @@ class Bordercontroll : AppCompatActivity() {
         }
         val button3 = findViewById<Button>(R.id.answerButtonDkBc3)
                 button3.setOnClickListener {
+                    startBordermusic()
                     backToStockholm()
-                        userSeeQuestionView.setText("You faild, back to Stockholm!")
+                        userSeeQuestionView.setText("You failed, back to Stockholm!")
         }
         val button4 = findViewById<Button>(R.id.answerButtonDkBc4)
                 button4.setOnClickListener {
+                    startBordermusic()
                     backToStockholm()
-                        userSeeQuestionView.setText("You faild, back to Stockholm!")
+                        userSeeQuestionView.setText("You failed, back to Stockholm!")
         }
 
 
@@ -70,7 +77,13 @@ class Bordercontroll : AppCompatActivity() {
 
     }
 
+    fun startBordermusic() {
+        borderMusic = MediaPlayer.create(this, R.raw.bordersound)
+        borderMusic?.setOnPreparedListener() {
+            borderMusic?.start()
+        }
 
+    }
 
 
 
