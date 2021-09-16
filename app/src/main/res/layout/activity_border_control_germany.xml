@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="198dp"
+        android:layout_width="match_parent"
         android:layout_height="217dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/userSeeQuestionStopGrTv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="TextView"
@@ -26,25 +26,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <EditText
-        android:id="@+id/userAnswerStopGrEt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/answerButtonStopGr4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        android:text="4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionStopGrTv" />
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonStopGr3" />
 
     <Button
-        android:id="@+id/answerButtonStopGr"
-        android:layout_width="wrap_content"
+        android:id="@+id/answerButtonStopGr1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Travel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerStopGrEt" />
+        android:layout_marginTop="44dp"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionStopGrTv"
+        tools:layout_editor_absoluteX="160dp" />
+
+    <Button
+        android:id="@+id/answerButtonStopGr2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonStopGr1"
+        tools:layout_editor_absoluteX="154dp" />
+
+    <Button
+        android:id="@+id/answerButtonStopGr3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonStopGr2"
+        tools:layout_editor_absoluteX="158dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

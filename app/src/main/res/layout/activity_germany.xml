@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/germanyFladIv"
-        android:layout_width="282dp"
+        android:layout_width="match_parent"
         android:layout_height="203dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/userSeeQuestionGrTv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="TextView"
@@ -28,26 +28,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/germanyFladIv" />
 
-    <EditText
-        android:id="@+id/userAnswerGrEt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/answerButtonGr4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:ems="10"
-        android:hint="Enter Answer"
-        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        android:text="4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionGrTv" />
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonGr3" />
 
     <Button
-        android:id="@+id/answerButtonGr"
-        android:layout_width="wrap_content"
+        android:id="@+id/answerButtonGr1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Travel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userAnswerGrEt" />
+        android:layout_marginTop="24dp"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@+id/userSeeQuestionGrTv"
+        tools:layout_editor_absoluteX="160dp" />
+
+    <Button
+        android:id="@+id/answerButtonGr2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonGr1"
+        tools:layout_editor_absoluteX="160dp" />
+
+    <Button
+        android:id="@+id/answerButtonGr3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/answerButtonGr2"
+        tools:layout_editor_absoluteX="160dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
