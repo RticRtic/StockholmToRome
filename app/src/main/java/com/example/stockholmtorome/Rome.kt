@@ -34,23 +34,25 @@ class Rome : AppCompatActivity() {
 
         val button1 = findViewById<Button>(R.id.answerButtonRo1)
         button1.setOnClickListener {
-            startFinalPage()
-            userSeeQuestionView.setText("Good job! Travel on to Switzerland")
+            backToStockholmPage()
+            startBordermusic()
+            userSeeQuestionView.setText("You failed! Go back to Stockholm and eat som kalles caviar!")
         }
         val button2 = findViewById<Button>(R.id.answerButtonRo2)
         button2.setOnClickListener {
             backToStockholmPage()
+            startBordermusic()
             userSeeQuestionView.setText("You failed! Go back to Stockholm and eat som kalles caviar!")
         }
         val button3 = findViewById<Button>(R.id.answerButtonRo3)
         button3.setOnClickListener {
-            startBordermusic()
-            backToStockholmPage()
-            userSeeQuestionView.setText("You failed! Go back to Stockholm and eat som kalles caviar!")
+            startFinalPage()
+            userSeeQuestionView.setText("Good job! The Pope wants to see you!")
         }
         val button4 = findViewById<Button>(R.id.answerButtonRo4)
         button4.setOnClickListener {
             backToStockholmPage()
+            startBordermusic()
 
             userSeeQuestionView.setText("You failed! Go back to Stockholm and eat som kalles caviar!")
         }
