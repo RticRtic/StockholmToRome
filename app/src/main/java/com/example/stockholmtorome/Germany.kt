@@ -4,7 +4,6 @@ import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -12,7 +11,6 @@ import android.widget.TextView
 class Germany : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
     var borderMusic : MediaPlayer? = null
 
 
@@ -22,7 +20,6 @@ class Germany : AppCompatActivity() {
 
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionGrTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerGrEt)
 
         userSeeQuestionView.setText(
             "Which river is the longest in Germany?\n" +
@@ -32,9 +29,29 @@ class Germany : AppCompatActivity() {
                     "4. Weser")
         Thread.sleep(2000)
 
-        val button = findViewById<Button>(R.id.answerButtonGr)
-        button.setOnClickListener {
-            userAnswerGermany()
+        val button1 = findViewById<Button>(R.id.answerButtonGr1)
+                button1.setOnClickListener {
+                    startSwitzerlandPage()
+                        startBordermusic()
+                            userSeeQuestionView.setText("Good job! Travel on to Switzerland")
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonGr2)
+                button2.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
+                            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonGr3)
+                button3.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
+                            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonGr4)
+                button4.setOnClickListener {
+                    borderControlPage()
+                        startBordermusic()
+                            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
         }
 
 
@@ -49,21 +66,7 @@ class Germany : AppCompatActivity() {
     }
 
 
-    fun userAnswerGermany(): Boolean {
-        if (userPutInAnswerView.text.toString().toInt() == 1) {
-            userSeeQuestionView.setText("Good job! Travel on to Switzerland")
-            startSwitzerlandPage()
 
-
-
-        } else {
-            userSeeQuestionView.setText("You faild, answer the bordercontrol!")
-            startBordermusic()
-            borderControlPage()
-        }
-        return false
-
-    }
 
     fun startSwitzerlandPage() {
         val intent = Intent(this, Switzerland::class.java)

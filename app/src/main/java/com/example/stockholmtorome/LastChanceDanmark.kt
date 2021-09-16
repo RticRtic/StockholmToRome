@@ -11,7 +11,7 @@ class LastChanceDanmark : AppCompatActivity() {
 
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutInAnswerView: EditText
+
 
 
 
@@ -21,7 +21,7 @@ class LastChanceDanmark : AppCompatActivity() {
 
 
         userSeeQuestionView = findViewById(R.id.lastchanceDkTv)
-        userPutInAnswerView = findViewById(R.id.userAnswerLastChanceDkEt)
+
 
         userSeeQuestionView.setText("Lego is from Danmark but when was the company created?\n" +
                 "1. 1947\n" +
@@ -30,24 +30,30 @@ class LastChanceDanmark : AppCompatActivity() {
                 "4. 1925")
         Thread.sleep(2000)
 
-        val button = findViewById<Button>(R.id.answerButtonLastChanceDk)
-            button.setOnClickListener {
-                answerLastChanceDk()
-
+        val button1 = findViewById<Button>(R.id.answerButtonLastChanceDk1)
+                button1.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("Back to Stockholm with you, your sour herring!")
             }
+        val button2 = findViewById<Button>(R.id.answerButtonLastChanceDk2)
+                button2.setOnClickListener {
+                    startGermanyPage()
+                        userSeeQuestionView.setText("Good job, lets travel to Germany!")
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonLastChanceDk3)
+                button3.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("Back to Stockholm with you, your sour herring!")
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonLastChanceDk4)
+                button4.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("Back to Stockholm with you, your sour herring!")
+        }
 
     }
 
-    fun answerLastChanceDk() {
-        if(userPutInAnswerView.text.toString().toInt() == 2) {
-            userSeeQuestionView.setText("Good job, Lets Travel!")
-            startGermanyPage()
-        }
-        else {
-            userSeeQuestionView.setText("Back to Stockholm with you your sour herring!")
-            backToStockholm()
-        }
-    }
+
 
 
     fun startGermanyPage() {

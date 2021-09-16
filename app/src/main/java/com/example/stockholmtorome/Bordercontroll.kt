@@ -6,13 +6,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.core.util.toRange
 import java.util.*
 
 class Bordercontroll : AppCompatActivity() {
 
     lateinit var userSeeQuestionView: TextView
-    lateinit var userPutinAnswerView: EditText
+
 
 
 
@@ -21,7 +20,7 @@ class Bordercontroll : AppCompatActivity() {
         setContentView(R.layout.activity_bordercontroll)
 
         userSeeQuestionView = findViewById(R.id.userSeeQuestionStopTv)
-        userPutinAnswerView = findViewById(R.id.userAnswerStopEt)
+
 
 
         userSeeQuestionView.setText(
@@ -32,38 +31,41 @@ class Bordercontroll : AppCompatActivity() {
                     "4. 45L")
         Thread.sleep(2000)
 
-        val button = findViewById<Button>(R.id.answerButtonStop)
-        button.setOnClickListener {
-            userAnswerStop()
+        val button1 = findViewById<Button>(R.id.answerButtonDkBc1)
+                button1.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("You faild, back to Stockholm!")
+        }
+        val button2 = findViewById<Button>(R.id.answerButtonDkBc2)
+                button2.setOnClickListener {
+                    backToLastChanceDanmarkPage()
+                        userSeeQuestionView.setText("Good job, lets travel")
+        }
+        val button3 = findViewById<Button>(R.id.answerButtonDkBc3)
+                button3.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("You faild, back to Stockholm!")
+        }
+        val button4 = findViewById<Button>(R.id.answerButtonDkBc4)
+                button4.setOnClickListener {
+                    backToStockholm()
+                        userSeeQuestionView.setText("You faild, back to Stockholm!")
         }
 
 
     }
 
 
-    fun userAnswerStop() {
 
-        if (userPutinAnswerView.text.toString().toInt() == 2) {
-            userSeeQuestionView.setText("Good job, lets travel more!")
-            backToDanmarkPage()
-
-
-        } else {
-            userSeeQuestionView.setText("You faild! One last Chance")
-            backToMainActivityPage()
-        }
-
-    }
-
-    fun backToDanmarkPage() {
+    fun backToLastChanceDanmarkPage() {
         val intent = Intent(this, LastChanceDanmark::class.java)
         startActivity(intent)
 
     }
 
 
-    fun backToMainActivityPage() {
-        val intent = Intent(this, LastChanceDanmark::class.java)
+    fun backToStockholm() {
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
 
     }
