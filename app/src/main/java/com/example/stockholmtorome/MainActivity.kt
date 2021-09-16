@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             startmedia()
             userSeeWelcomeTextView.setText(
-                "Ïn this travelquiz your’r going from stockholm\n" +
+                "Ïn this travelquiz you’re going from stockholm\n" +
                         "to rome. Each stop on the way to Rome, there will\n" +
                         "be a specific question for that location.\n" +
                         "\n" +
